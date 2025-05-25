@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | AI Prompt</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            fade: 'fadeIn 1s ease-in-out',
+            slide: 'slideIn 0.6s ease-out',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 },
+            },
+            slideIn: {
+              '0%': { transform: 'translateY(20px)', opacity: 0 },
+              '100%': { transform: 'translateY(0)', opacity: 1 },
+            },
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body style="background-image: url('pexels-robyn-185550357-11300732.jpg'); background-size: cover; background-position: center;" class="flex items-center justify-center min-h-screen">
+
+  <div class="bg-white p-8 rounded-2xl shadow-xl w-80 animate-slide">
+    <h2 class="text-2xl font-bold text-center mb-6 text-blue-700">Sign In</h2>
+    <input type="text" placeholder="Username" class="w-full p-3 mb-4 border border-blue-300 rounded-md focus:ring-2 focus:ring-blue-400" />
+    <input type="password" placeholder="Password" class="w-full p-3 mb-5 border border-blue-300 rounded-md focus:ring-2 focus:ring-blue-400" />
+    <button onclick="login()" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-200">
+      Log In
+    </button>
+  </div>
+
+  <script>
+    function login() {
+      window.location.href = 'prompt.html';
+    }
+  </script>
+</body>
+</html>
