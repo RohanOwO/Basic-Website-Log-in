@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prompt | AI Prompt</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          animation: {
+            fade: 'fadeIn 1s ease-in-out',
+            float: 'floatUp 1s ease-out',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 },
+            },
+            floatUp: {
+              '0%': { transform: 'translateY(15px)', opacity: 0 },
+              '100%': { transform: 'translateY(0)', opacity: 1 },
+            },
+          },
+        },
+      },
+    }
+  </script>
+</head>
+<body style="background-image: url('AI.jpeg'); background-size: cover; background-position: center;" class="flex items-center justify-center min-h-screen">
+  <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-2xl animate-float">
+    <h2 class="text-3xl font-semibold mb-6 text-center text-purple-700">AI Prompt Interface</h2>
+    <textarea rows="8" placeholder="Type your prompt here..." class="w-full p-4 border border-purple-300 rounded-md focus:ring-2 focus:ring-purple-400 mb-6"></textarea>
+    <button class="w-full bg-purple-600 text-white py-3 rounded-md hover:bg-purple-700 transition duration-200">
+      Submit Prompt
+    </button>
+  </div>
+</body>
+</html>
